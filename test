@@ -1,0 +1,28 @@
+
+/*Call Python script to get data*/
+String path = Main.class.getResource("Locator.py").toString().substring(6);
+path = path.substring(0, path.length() - 14) + "APIGrabber.py";
+String path2 = path.substring(0, path.length() - 14) + "/output.txt";
+
+@SuppressWarnings("unused")
+Process process = Runtime.getRuntime().exec("C://Python27//python " + path);
+
+try {
+	Thread.sleep(1000);
+} catch (InterruptedException e) {
+	e.printStackTrace();
+}
+
+/*Get raw data*/
+String[] data = ReadFile.read("output.txt", 4);
+Scanner scanner2 = new Scanner(new File(path2));
+
+System.out.println(Arrays.toString(data));
+String tier1 = scanner2.nextLine();
+String roman1 = scanner2.nextLine();
+String win1 = scanner2.nextLine();
+String loss1 = scanner2.nextLine();
+String tier2 = scanner2.nextLine();
+String roman2 = scanner2.nextLine();
+String win2 = scanner2.nextLine();
+String loss2 = scanner2.nextLine();
