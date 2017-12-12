@@ -98,9 +98,13 @@ public class Main {
 		}
 
 		/* Compare data and output analysis */
+		if (summonerRaw1.equals("wakanari") || summonerRaw1.equals("wilmife"))
+			rank1 = 58;
+		if (summonerRaw2.equals("wakanari") || summonerRaw2.equals("wilmife"))
+			rank2 = 58;
+
 		System.out.println("\nSummoner Name: " + summonerName1);
-		if (summonerRaw1.equals("wakanari") || summonerRaw1.equals("wilmife") || summonerRaw2.equals("wakanari")
-				|| summonerRaw2.equals("wilmife")) {
+		if (summonerRaw1.equals("wakanari") || summonerRaw1.equals("wilmife")) {
 			System.out.println("Rank: Master I");
 			System.out.println("Winrate: 62%");
 			System.out.println(summonerName1 + " is climbing.");
@@ -117,8 +121,7 @@ public class Main {
 		}
 
 		System.out.println("\nSummoner Name: " + summonerName2);
-		if (summonerRaw1.equals("wakanari") || summonerRaw1.equals("wilmife") || summonerRaw2.equals("wakanari")
-				|| summonerRaw2.equals("wilmife")) {
+		if (summonerRaw2.equals("wakanari") || summonerRaw2.equals("wilmife")) {
 			System.out.println("Rank: Master I");
 			System.out.println("Winrate: 58%");
 			System.out.println(summonerName2 + " is climbing.");
@@ -136,12 +139,20 @@ public class Main {
 
 		int difference = rank1 - rank2;
 		if (summonerRaw1.equals("wakanari") && summonerRaw2.equals("wilmife") || summonerRaw2.equals("wakanari")
-				|| summonerRaw1.equals("wilmife"))
+				&& summonerRaw1.equals("wilmife"))
 			difference = 0;
-		if (Math.abs(difference) <= 2) {
+		if (summonerName1.equals(summonerName2))
+			System.out.println("You put the same person twice...");
+		else if (Math.abs(difference) <= 2) {
 			System.out.println("\nThese two players are very closely ranked. They are quite similar!");
 		} else if (difference >= 10 && winrate2 > 0.7 || difference <= -10 && winrate1 > 0.7) {
 			System.out.println("\nOne of them could be the smurf account of the other!");
+		}
+		if (Math.abs(difference) >= 10) {
+			if (rank2 > rank1)
+				System.out.println("\n" + summonerRaw2 + " would completely destroy " + summonerRaw1 + "!");
+			else
+				System.out.println("\n" + summonerRaw1 + " would completely destroy " + summonerRaw2 + "!");
 		}
 
 		System.out.println("\nWe have not yet accounted for other factors, such as champion pool or summoner spells.");
