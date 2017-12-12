@@ -98,13 +98,13 @@ public class Main {
 
 		/* Compare data and output analysis */
 		if (summonerRaw1.equals("wakanari") || summonerRaw1.equals("wilmife"))
-			rank1 = 58;
+			rank1 = 58; //hardcoded override for demonstration (remove)
 		if (summonerRaw2.equals("wakanari") || summonerRaw2.equals("wilmife"))
-			rank2 = 58;
+			rank2 = 58; //hardcoded override for demonstration (remove)
 
 		System.out.println("\nSummoner Name: " + summonerName1);
 		if (summonerRaw1.equals("wakanari") || summonerRaw1.equals("wilmife")) {
-			System.out.println("Rank: Master I");
+			System.out.println("Rank: Master I"); //hardcoded override for demonstration (remove)
 			System.out.println("Winrate: 62%");
 			System.out.println(summonerName1 + " is climbing.");
 		} else {
@@ -121,7 +121,7 @@ public class Main {
 
 		System.out.println("\nSummoner Name: " + summonerName2);
 		if (summonerRaw2.equals("wakanari") || summonerRaw2.equals("wilmife")) {
-			System.out.println("Rank: Master I");
+			System.out.println("Rank: Master I"); //hardcoded override for demonstration (remove)
 			System.out.println("Winrate: 58%");
 			System.out.println(summonerName2 + " is climbing.");
 		} else {
@@ -138,7 +138,7 @@ public class Main {
 
 		int difference = rank1 - rank2;
 		if (summonerRaw1.equals("wakanari") && summonerRaw2.equals("wilmife") || summonerRaw2.equals("wakanari")
-				&& summonerRaw1.equals("wilmife"))
+				&& summonerRaw1.equals("wilmife")) //hardcoded override for demonstration (remove)
 			difference = 0;
 		if (summonerName1.equals(summonerName2))
 			System.out.println("You put the same person twice...");
