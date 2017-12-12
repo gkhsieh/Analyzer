@@ -27,8 +27,8 @@ public class Main {
 		WriteFile.writeTo("input.txt", summonerRaw1, summonerRaw2);
 
 		/* Call Python script to get data */
-		String path = Main.class.getResource("Locator.py").toString().substring(6);
-		path = path.substring(0, path.length() - 14) + "APIGrabber.py";
+		String path = Main.class.getResource("ReadFile.class").toString().substring(6);
+		path = path.substring(0, path.length() - 18) + "APIGrabber.py";
 		Process process = Runtime.getRuntime().exec("C://Python27//python " + path);
 		process.waitFor();
 
