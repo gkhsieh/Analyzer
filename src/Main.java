@@ -1,4 +1,3 @@
-
 /**
  * Parses data and analyzes it. Currently, can only compare rank and win rate.
  */
