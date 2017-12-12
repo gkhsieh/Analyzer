@@ -30,7 +30,7 @@ def main():
     #From txt file and personal API Key
     summonerName1 = (inputFile.readline()).rstrip()
     summonerName2 = (inputFile.readline()).rstrip()
-    APIKey = "RGAPI-bc2a2692-23ef-4ca0-9415-d5e915f7ae8c"
+    APIKey = "RGAPI-a93467d9-72af-4720-a459-284f61c7418e"
     
     #summonerName = (str)(raw_input('Type your Summoner Name here and DO NOT INCLUDE ANY SPACES: '))
     #APIKey = (str)(raw_input('Copy and paste your API Key here: '))
@@ -49,10 +49,16 @@ def main():
     responseJSON2 = requestRankedData(ID, APIKey)
     print responseJSON2
 
-    tier = (str) (responseJSON2[0]['tier'])
-    rank = (str) (responseJSON2[0]['rank'])
-    wins = (str) (responseJSON2[0]['wins'])
-    losses = (str) (responseJSON2[0]['losses'])
+    if ((str)(responseJSON2[0]['queueType']) == "RANKED_SOLO_5x5"):
+        tier = (str) (responseJSON2[0]['tier'])
+        rank = (str) (responseJSON2[0]['rank'])
+        wins = (str) (responseJSON2[0]['wins'])
+        losses = (str) (responseJSON2[0]['losses'])
+    else:
+        tier = (str) (responseJSON2[1]['tier'])
+        rank = (str) (responseJSON2[1]['rank'])
+        wins = (str) (responseJSON2[1]['wins'])
+        losses = (str) (responseJSON2[1]['losses'])
     print tier
     print rank
     print wins
