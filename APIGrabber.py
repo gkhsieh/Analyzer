@@ -54,11 +54,16 @@ def main():
         rank = (str) (responseJSON2[0]['rank'])
         wins = (str) (responseJSON2[0]['wins'])
         losses = (str) (responseJSON2[0]['losses'])
-    else:
+    elif ((str)(responseJSON2[1]['queueType']) == "RANKED_SOLO_5x5"):
         tier = (str) (responseJSON2[1]['tier'])
         rank = (str) (responseJSON2[1]['rank'])
         wins = (str) (responseJSON2[1]['wins'])
         losses = (str) (responseJSON2[1]['losses'])
+    else:
+        tier = (str) (responseJSON2[2]['tier'])
+        rank = (str) (responseJSON2[2]['rank'])
+        wins = (str) (responseJSON2[2]['wins'])
+        losses = (str) (responseJSON2[2]['losses'])
     print tier
     print rank
     print wins
