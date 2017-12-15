@@ -30,7 +30,7 @@ def main():
     #From txt file and personal API Key
     summonerName1 = (inputFile.readline()).rstrip()
     summonerName2 = (inputFile.readline()).rstrip()
-    APIKey = "RGAPI-a93467d9-72af-4720-a459-284f61c7418e"
+    APIKey = "RGAPI-2b45ea8e-ed7d-4134-a9af-60e18740a1e0"
     
     #summonerName = (str)(raw_input('Type your Summoner Name here and DO NOT INCLUDE ANY SPACES: '))
     #APIKey = (str)(raw_input('Copy and paste your API Key here: '))
