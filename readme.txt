@@ -6,3 +6,5 @@ APIGrabber takes the output from the Java program in input.txt, obtains informat
 This project requires a new API key every 24 hours.
 This is located on line 33 in the APIGrabber.py on the line APIKey = "[API-KEY]"
 Message me on Discord (wakanari#7214), add me on League (wakanari), or email me (ghsieh2@illinois.edu) if you want to test the program.
+
+In addition, please follow the instructions in youtu.be/Q74U_n5vZV0.
